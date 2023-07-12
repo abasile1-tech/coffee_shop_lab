@@ -5,6 +5,8 @@ class TestCoffeeShop(unittest.TestCase):
 
 #  A `CoffeeShop` should be able to sell a drink to a customer and increase it's `till` by the price of `Drink`. **Hint:** Use a `Customer` method you already have.
 
+# CoffeeShop` should refuse service to a `Customer` with an `energy` above a certain amount!
+
     def setUp(self):
         self.latte = Drink("latte", 5)
         self.americano = Drink("americano", 4)

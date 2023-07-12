@@ -1,6 +1,6 @@
-# A `Customer` should have a `name`, and a `wallet`
-#   - A `Customer` should have method which reduces the `wallet` by a specified `amount` as a parameter
-#   - A `Customer` should be able to buy a `Drink` and reduce their `wallet` by the `Drink`'s price.
+#  - Most coffee shops won't serve coffee to anyone under 16. Add an `age` to the `Customer`. Make sure the `CoffeeShop` checks the `age` before serving the `Customer`.
+
+# add `energy` level to the `Customer`. Every time a `Customer` buys a drink, the `energy` level should go up by the `caffeine_level`.
 
 import unittest
 from src.customer import Customer

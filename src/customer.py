@@ -10,4 +10,7 @@ class Customer:
 
     def buy_a_drink(self, drink):
         self.spend_money(drink.price)
+
+    def buy_food(self, food):
+        self.caffeine_level -= food.digestion_level
         

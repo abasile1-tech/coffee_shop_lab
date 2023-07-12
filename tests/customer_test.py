@@ -8,8 +8,8 @@ from src.drink import Drink
 class TestCustomer(unittest.TestCase):
 
     def setUp(self):
-        self.customer_1 = Customer("Robert", 100)
-        self.latte = Drink("Latter", 5)
+        self.customer_1 = Customer("Robert", 100, 50)
+        self.latte = Drink("Latter", 5, 20)
 
     def test_customer_has_a_name(self):
         self.assertEqual("Robert", self.customer_1.name)

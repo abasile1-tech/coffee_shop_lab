@@ -16,14 +16,7 @@ class CoffeeShop:
 			return True
 	
 	def drink_names(self):
-		list_of_drinks = []
-		for drink in self.drinks:
-			list_of_drinks.append(drink.name)
-		return list_of_drinks
+		return [drink.name for drink in self.drinks]
 	
 	def drinks_customer_can_afford(self, customer):
-		drinks_customer_can_afford = []
-		for drink in self.drinks:
-			if drink.price <= customer.wallet:
-				drinks_customer_can_afford.append(drink.name)
-		return drinks_customer_can_afford
+		return [drink.name for drink in self.drinks if drink.price <= customer.wallet]

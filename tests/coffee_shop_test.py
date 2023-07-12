@@ -4,9 +4,6 @@ from src.drink import Drink
 from src.customer import Customer
 class TestCoffeeShop(unittest.TestCase):
 
-# `CoffeeShop` can have a `drink_names` method that returns a list of the names of every drink the coffee shop holds.
-# CoffeeShop` can have an `drinks_customer_can_afford` function which takes in a `Customer` and returns a list of drinks they can afford.
-
     def setUp(self):
         self.latte = Drink("latte", 5, 20)
         self.americano = Drink("americano", 4, 30)

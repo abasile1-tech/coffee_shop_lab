@@ -1,7 +1,3 @@
-#  - Most coffee shops won't serve coffee to anyone under 16. Add an `age` to the `Customer`. Make sure the `CoffeeShop` checks the `age` before serving the `Customer`.
-
-# add `energy` level to the `Customer`. Every time a `Customer` buys a drink, the `energy` level should go up by the `caffeine_level`.
-
 import unittest
 from src.customer import Customer
 from src.drink import Drink

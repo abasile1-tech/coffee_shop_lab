@@ -32,4 +32,10 @@ class CoffeeShop:
         while self.stock[drink_to_remove] >= 0 and quantity_to_remove > 0:
             self.stock[drink_to_remove] -= 1
             quantity_to_remove -= 1
+
+    def get_stock_value(self):
+        stock_value = 0
+        for value in self.stock.values():
+            stock_value += value
+        return stock_value
         

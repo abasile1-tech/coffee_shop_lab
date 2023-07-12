@@ -53,3 +53,9 @@ class TestCoffeeShop(unittest.TestCase):
         self.coffee_shop.add_to_stock(self.latte,5)
         self.coffee_shop.remove_from_stock(self.latte, 3)
         self.assertEqual(2,self.coffee_shop.stock[self.latte])
+
+    def test_stock_value(self):
+        self.coffee_shop.add_to_stock(self.latte,5)
+        self.coffee_shop.remove_from_stock(self.latte, 3)
+        self.coffee_shop.add_to_stock(self.americano,11)
+        self.assertEqual(13, self.coffee_shop.get_stock_value())

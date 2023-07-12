@@ -4,9 +4,8 @@ from src.drink import Drink
 from src.customer import Customer
 class TestCoffeeShop(unittest.TestCase):
 
-#  A `CoffeeShop` should be able to sell a drink to a customer and increase it's `till` by the price of `Drink`. **Hint:** Use a `Customer` method you already have.
-
-# CoffeeShop` should refuse service to a `Customer` with an `energy` above a certain amount!
+# `CoffeeShop` can have a `drink_names` method that returns a list of the names of every drink the coffee shop holds.
+# CoffeeShop` can have an `drinks_customer_can_afford` function which takes in a `Customer` and returns a list of drinks they can afford.
 
     def setUp(self):
         self.latte = Drink("latte", 5, 20)
@@ -15,6 +14,7 @@ class TestCoffeeShop(unittest.TestCase):
         self.coffee_shop = CoffeeShop("The Prancing Pony", 100, self.drinks)
         self.customer_1 = Customer("Robert", 100, 101)
         self.customer_2 = Customer("Brain", 200, 0)
+        self.customer_3 = Customer("Batman", 4, 10)
     
     def test_coffee_shop_has_name(self):
         self.assertEqual("The Prancing Pony", self.coffee_shop.name)
@@ -38,4 +38,9 @@ class TestCoffeeShop(unittest.TestCase):
 
     def test_refuse_service(self):
         self.assertEqual(False, self.coffee_shop.sell_drink(self.customer_1, self.latte))
-        
+
+    def test_drink_names(self):
+        self.assertEqual(["latte", "americano"], self.coffee_shop.drink_names())
+
+    def test_drink_customer_can_afford(self):
+        self.assertEqual([self.americano.name], self.coffee_shop.drinks_customer_can_afford(self.customer_3))

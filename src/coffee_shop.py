@@ -14,3 +14,16 @@ class CoffeeShop:
 			self.change_till_by_amount(drink.price)
 			customer.buy_a_drink(drink)
 			return True
+	
+	def drink_names(self):
+		list_of_drinks = []
+		for drink in self.drinks:
+			list_of_drinks.append(drink.name)
+		return list_of_drinks
+	
+	def drinks_customer_can_afford(self, customer):
+		drinks_customer_can_afford = []
+		for drink in self.drinks:
+			if drink.price <= customer.wallet:
+				drinks_customer_can_afford.append(drink.name)
+		return drinks_customer_can_afford

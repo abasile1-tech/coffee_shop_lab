@@ -44,3 +44,12 @@ class TestCoffeeShop(unittest.TestCase):
 
     def test_drink_customer_can_afford(self):
         self.assertEqual([self.americano.name], self.coffee_shop.drinks_customer_can_afford(self.customer_3))
+
+    def test_add_to_stock(self):
+        self.coffee_shop.add_to_stock(self.latte,5)
+        self.assertEqual(5,self.coffee_shop.stock[self.latte])
+    
+    def test_remove_from_stock(self):
+        self.coffee_shop.add_to_stock(self.latte,5)
+        self.coffee_shop.remove_from_stock(self.latte, 3)
+        self.assertEqual(2,self.coffee_shop.stock[self.latte])

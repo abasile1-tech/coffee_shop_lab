@@ -12,9 +12,10 @@ class TestCoffeeShop(unittest.TestCase):
         self.americano = Drink("americano", 4, 30)
         self.drinks = [self.latte, self.americano]
         self.coffee_shop = CoffeeShop("The Prancing Pony", 100, self.drinks)
-        self.customer_1 = Customer("Robert", 100, 101)
-        self.customer_2 = Customer("Brain", 200, 0)
-        self.customer_3 = Customer("Batman", 4, 10)
+        self.customer_1 = Customer("Robert", 100, 101, 30)
+        self.customer_2 = Customer("Brain", 200, 0, 30)
+        self.customer_3 = Customer("Batman", 4, 10, 30)
+        self.customer_4 = Customer("Child",10,0,9)
     
     def test_coffee_shop_has_name(self):
         self.assertEqual("The Prancing Pony", self.coffee_shop.name)
@@ -59,3 +60,6 @@ class TestCoffeeShop(unittest.TestCase):
         self.coffee_shop.remove_from_stock(self.latte, 3)
         self.coffee_shop.add_to_stock(self.americano,11)
         self.assertEqual(13, self.coffee_shop.get_stock_value())
+
+    def test_age_refusal(self):
+        self.assertEqual(False, self.coffee_shop.sell_drink(self.customer_4, self.latte))

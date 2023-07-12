@@ -12,7 +12,7 @@ class CoffeeShop:
         self.till += amount 
 
     def sell_drink(self, customer, drink):
-        if customer.caffeine_level > 100:
+        if customer.caffeine_level > 100 or customer.age < 16:
             return False
         else:
             self.change_till_by_amount(drink.price)

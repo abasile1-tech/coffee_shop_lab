@@ -1,9 +1,10 @@
 class Customer:
 
-    def __init__(self, name, wallet, caffeine_level):
+    def __init__(self, name, wallet, caffeine_level, age):
         self.name = name
         self.wallet = wallet
         self.caffeine_level = caffeine_level
+        self.age = age
 
     def spend_money(self, amount):
         self.wallet -= amount

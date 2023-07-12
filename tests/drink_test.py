@@ -9,8 +9,8 @@ class DrinkTest(unittest.TestCase):
         self.latte = Drink("Latte", 5)
 
     def test_drink_has_name(self):
-        self.assertEqual("Latt", self.latte.name)
+        self.assertEqual("Latte", self.latte.name)
 
     def test_drink_has_price(self):
-        self.assertEqual(4, self.latte.price)
+        self.assertEqual(5, self.latte.price)
 

@@ -3,6 +3,9 @@ from src.coffee_shop import CoffeeShop
 
 class TestCoffeeShop(unittest.TestCase):
 
+# A `CoffeeShop` should have a `name`, a `till`, and a collection of `drinks` containing instances of class `Drink` (Mocha, Latte, Hot Chocolate, Tea etc)
+#  A `CoffeeShop` should be able to sell a drink to a customer and increase it's `till` by the price of `Drink`. **Hint:** Use a `Customer` method you already have.
+
     def setUp(self):
         self.coffee_shop = CoffeeShop("The Prancing Pony", 100)
     
